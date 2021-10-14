@@ -103,6 +103,17 @@ if ball.xcor()>-390:
     pen.clear
     pen.write('Player 1: {}      Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('Verdana', 28,'normal'))
     
+#Handling the Collisions
+if(ball.xcor()>340)and(ball.xcor()<350)and(
+    ball.ycor()<rightpaddle.ycor()+40 and ball.ycor()>rightpaddle.ycor()-40):
+    ball.setx(340)
+    ballxdirection=ballxdirection*-1
+
+if(ball.xcor()<-340)and(ball.xcor()>-350)and(
+    ball.ycor()<leftpaddle.ycor()+40 and ball.ycor()>leftpaddle.ycor()-40):
+    ball.setx(-340)
+    ballxdirection=ballxdirection*-1
+    
    
 
 
