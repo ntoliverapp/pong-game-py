@@ -56,6 +56,16 @@ def leftpaddledown():
     y=y-90
     leftpaddle.sety(y)
     
+#moving the right paddle
+def rightpaddleup():
+    y=rightpaddle.ycor()
+    y=y+90
+    rightpaddle.sety(y)
     
+def rightpaddledown():
+    y=rightpaddle.ycor()
+    y=y-90
+    rightpaddle.sety(y)
+   
 
 
