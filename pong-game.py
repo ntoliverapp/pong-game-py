@@ -1,6 +1,6 @@
 import turtle as turtleplayerAscore
-playerAscore=0
-playerBscore=0
+player_one_score=0
+player_two_score=0
 
 window=t.Screen()
 window.title("Pong Game")
@@ -81,9 +81,28 @@ while True:
 ball.setx(ball.xcor()+ballxdirection)
 ball.sety(ball.ycor()+ballydirection)
 
+#setting up the border
+if ball.ycor()>290:
+    ball.sety(290)
+    ballydirection=ballydirection*-1
+if ball.ycor()>-290:
+    ball.sety(-290)
+    ballydirection=ballydirection*-1    
 
-
-
+if ball.xcor()>390:
+    ball.goto(0,0)
+    ballxdirection=ballxdirection
+    player_one_score=player_one_score+1
+    pen.clear
+    pen.write('Player 1: {}      Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('Verdana', 28,'normal'))
+    
+if ball.xcor()>-390:
+    ball.goto(0,0)
+    ballxdirection=ballxdirection*-1
+    player_one_score=player_one_score+1
+    pen.clear
+    pen.write('Player 1: {}      Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('Verdana', 28,'normal'))
+    
    
 
 
