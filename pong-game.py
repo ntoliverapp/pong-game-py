@@ -77,6 +77,13 @@ window.onkeypress(rightpaddledown, 'Down')
 while True:
     window.update()
 
+#moving the ball
+ball.setx(ball.xcor()+ballxdirection)
+ball.sety(ball.ycor()+ballydirection)
+
+
+
+
    
 
 
