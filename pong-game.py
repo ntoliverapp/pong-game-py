@@ -45,6 +45,17 @@ pen.hideturtle()
 pen,goto(0,260)
 pen.write('score',align='center', font=('Verdana', 28,'normal'))
 
-
+#moving the leftpaddle
+def leftpaddleup():
+    y=leftpaddle.ycor()
+    y=y+90
+    leftpaddle.sety(y)
+    
+def leftpaddledown():
+    y=leftpaddle.ycor()
+    y=y-90
+    leftpaddle.sety(y)
+    
+    
 
 
