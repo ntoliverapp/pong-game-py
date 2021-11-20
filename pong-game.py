@@ -101,16 +101,16 @@ while True:
         ball.goto(0,0)
         ball_x_direction = ball_x_direction * -1
         player_one_score = player_one_score + 1
-        pen.clear
-        pen.write('Player 1: {}      Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('comic sans MS', 20,'normal'))
+        pen.clear()
+        pen.write('Player 1: {}                Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('comic sans MS', 20,'normal'))
   
     
     if ball.xcor() < -390: #left width paddle border
         ball.goto(0,0)
         ball_x_direction = ball_x_direction * -1
-        player_one_score = player_one_score + 1
+        player_two_score = player_two_score + 1
         pen.clear()
-        pen.write('Player 1: {}      Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('comic sans MS', 20,'normal'))
+        pen.write('Player 1: {}                Player 2: {}'.format(player_one_score,player_two_score),align='center',font=('comic sans MS', 20,'normal'))
 
     
 #Handling the Collisions
@@ -121,6 +121,20 @@ while True:
     if(ball.xcor() < -340) and (ball.xcor() > -350) and (ball.ycor() < left_paddle.ycor() +40 and ball.ycor() > left_paddle.ycor() -40):
         ball.setx(-340)
         ball_x_direction = ball_x_direction * -1
+ 
+
+
+
+ 
+
+ 
+    
+    
+    
+    
+    
+    
+    
     
     
     
